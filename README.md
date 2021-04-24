@@ -14,4 +14,14 @@ Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.
 
 Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3`
 
-TODO
+> [gnl-unit-test](http://phoenix.yizimg.com/harm-smits/gnl-unit-test) by [harm-smits](http://phoenix.yizimg.com/harm-smits)
+
+![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_gnl-unit-test.png)
+
+> [Get_Next_Line_Tester](https://github.com/Hellio404/Get_Next_Line_Tester) by [Hellio404](https://github.com/Hellio404)
+
+![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_Get_Next_Line_Tester.png)
+
+> [gnlTester](https://github.com/Tripouille/gnlTester) by [Tripouille](https://github.com/Tripouille)
+
+![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_gnlTester.png)
