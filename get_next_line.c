@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 12:09:26 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:13:01 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*ft_read_line(int fd, char *str)
 	int		pos;
 
 	pos = read(fd, buf, BUFFER_SIZE);
-	while (pos)
+	while (pos > 0)
 	{
 		buf[pos] = '\0';
 		str = ft_strjoin(str, buf);
