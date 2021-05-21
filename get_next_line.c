@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 02:03:44 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/21 02:17:23 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	ft_put_in_line(char **line, char *str)
 			*line = ft_strdup("");
 		else
 		{
-			*line = ft_strdup(str);
+			*line = ft_strdup(str); // here ?
 		}
 		return (1);
 	}
@@ -67,7 +67,7 @@ int	get_next_line(int fd, char **line)
 		return (-1);
 	else
 	{
-		str = ft_read_line(fd, str);
+		str = ft_read_line(fd, str); // here ?
 		result = ft_put_in_line(line, str);
 		free(str);
 		return (result);
