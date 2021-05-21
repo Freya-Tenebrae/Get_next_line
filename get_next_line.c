@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 12:29:46 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:30:41 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*ft_read_line(int fd, char *str)
 static char	*ft_put_in_line(char *str)
 {
 	int	i;
-	char *res
+	char *res;
 
 	i = 0;
 	if (*str)
