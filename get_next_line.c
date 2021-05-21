@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 12:13:01 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:29:46 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,39 +37,48 @@ static char	*ft_read_line(int fd, char *str)
 	return (str);
 }
 
-static int	ft_put_in_line(char **line, char *str)
+/*
+	fonction todo correctly
+*/
+
+static char	*ft_put_in_line(char *str)
 {
 	int	i;
+	char *res
 
 	i = 0;
-	if (str[i] == '\0')
-		return (0);
+	if (*str)
+		return (NULL);
 	else
 	{
 		while (str[i] != '\n' || str[i] != '\0')
 			i++;
 		if (i == 0)
-			*line = ft_strdup("");
+			res = ft_strdup("");
 		else
 		{
-			*line = ft_strdup(str); // here ?
+			res = ft_strdup(str);
 		}
-		return (1);
+		return (res);
 	}
 }
 
 int	get_next_line(int fd, char **line)
 {
 	static char	*str;
-	int			result;
 
 	if (ft_is_fd_correct(fd, line, &str) != 0)
 		return (-1);
 	else
 	{
-		str = ft_read_line(fd, str); // here ?
-		result = ft_put_in_line(line, str);
-		free(str);
-		return (result);
+		str = ft_read_line(fd, str);
+		if (*str)
+		{
+			*line = ft_put_in_line(str);
+			if (!*line)
+				return (-1);
+			return(1);
+		}
+		return (0);
 	}
 }
