@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 12:30:41 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/24 14:18:10 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,17 @@ static int	ft_is_fd_correct(int fd, char **line, char **str)
 static char	*ft_read_line(int fd, char *str)
 {
 	char	buf[BUFFER_SIZE + 1];
-	int		pos;
+	int		i;
+	int		j;
 
-	pos = read(fd, buf, BUFFER_SIZE);
-	while (pos > 0)
+	i = read(fd, buf, BUFFER_SIZE);
+	j = 0;
+	while (i > 0)
 	{
-		buf[pos] = '\0';
+		j = j + i;
+		buf[j] = '\0';
 		str = ft_strjoin(str, buf);
-		pos = read(fd, buf, BUFFER_SIZE);
+		i = read(fd, buf, BUFFER_SIZE);
 	}
 	return (str);
 }
