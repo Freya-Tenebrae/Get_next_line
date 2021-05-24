@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/24 14:18:10 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/24 14:24:51 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,9 @@ static char	*ft_read_line(int fd, char *str)
 	j = 0;
 	while (i > 0)
 	{
-		j = j + i;
-		buf[j] = '\0';
+		buf[i] = '\0';
 		str = ft_strjoin(str, buf);
-		i = read(fd, buf, BUFFER_SIZE);
+		i = i + read(fd, buf, BUFFER_SIZE);
 	}
 	return (str);
 }
@@ -46,24 +45,17 @@ static char	*ft_read_line(int fd, char *str)
 
 static char	*ft_put_in_line(char *str)
 {
-	int	i;
-	char *res;
+	int		i;
+	char	*res;
 
 	i = 0;
-	if (*str)
-		return (NULL);
+	while (str[i] != '\n' || str[i] != '\0')
+		i++;
+	if (i == 0)
+		res = ft_strdup("");
 	else
-	{
-		while (str[i] != '\n' || str[i] != '\0')
-			i++;
-		if (i == 0)
-			res = ft_strdup("");
-		else
-		{
-			res = ft_strdup(str);
-		}
-		return (res);
-	}
+		res = ft_strdup(str);
+	return (res);
 }
 
 int	get_next_line(int fd, char **line)
@@ -80,7 +72,7 @@ int	get_next_line(int fd, char **line)
 			*line = ft_put_in_line(str);
 			if (!*line)
 				return (-1);
-			return(1);
+			return (1);
 		}
 		return (0);
 	}
