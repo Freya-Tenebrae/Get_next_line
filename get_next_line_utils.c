@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/21 01:44:36 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/26 00:29:14 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,7 @@ static void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-static void	ft_bzero(void *b, size_t n)
-{
-	ft_memset(b, 0, n);
-}
-
-static size_t	ft_strlen(const char *s)
+size_t  ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -52,7 +47,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res = malloc(len * sizeof(char));
 	if (!res)
 		return (0);
-	ft_bzero(res, len);
+    ft_memset(res, 0, len);
 	i = -1;
 	j = 0;
 	while (s1[++i] != '\0')
@@ -61,6 +56,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		res[i++] = s2[j++];
 	res[i] = '\0';
 	return (res);
+}
+
+char    *ft_strndup(const char *s1, size_t n)
+{
+    char    *str;
+    size_t    i;
+
+    str = malloc((n + 1) * sizeof(char));
+    if (!str)
+        return (0);
+    i = -1;
+    while (++i < n)
+        str[i] = s1[i];
+    str[i] = '\0';
+    return (str);
 }
 
 char	*ft_strdup(const char *s1)
@@ -79,3 +89,4 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
+
