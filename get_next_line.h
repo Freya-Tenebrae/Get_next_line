@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/05/26 00:29:27 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/05/21 02:17:30 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@
 /* ************************************************************************** */
 # include <stdlib.h>
 # include <unistd.h>
-/* ************************************************************************** */
-/*                                  TYPEDEF                                   */
-/* ************************************************************************** */
-/*	# define BUFFER_SIZE 16 */ // here ?
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 /* ************************************************************************** */
 /*                                  FUNCTION                                  */
 /* ************************************************************************** */
 int		get_next_line(int fd, char **line);
-size_t  ft_strlen(const char *s);
+size_t	ft_strlen(const char *s);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strdup(const char *s1);
-char    *ft_strndup(const char *s1, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+char	*ft_strndup(const char *s1, size_t n);
+void	*ft_memset(void *b, int c, size_t len);
 
 #endif
