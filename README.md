@@ -10,18 +10,23 @@ This Repositorie contains my solution to the project `get_next_line` of 42 (Pari
 
 ## Test
 
-Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3`
+Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3` et sur un `iMac (fin 2012)` sous `macOS Mojave Version 10.14.6`
 
-Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3`
+Test done on a `MacBook Air (M1, 2020)` under `macOS Big Sur Version 11.2.3` and on a `iMac (late 2012)` under `macOS Mojave Version 10.14.6`
 
-> [gnl-unit-test](http://phoenix.yizimg.com/harm-smits/gnl-unit-test) by [harm-smits](http://phoenix.yizimg.com/harm-smits)
+> [42TESTERS-GNL](https://github.com/Mazoise/42TESTERS-GNL) by [Mazoise](https://github.com/Mazoise)
 
-![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_gnl-unit-test.png)
+![results](https://github.com/Freya-Tenebrae/Get_next_line/blob/main/42TESTERS-GNL.png)
 
 > [Get_Next_Line_Tester](https://github.com/Hellio404/Get_Next_Line_Tester) by [Hellio404](https://github.com/Hellio404)
 
-![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_Get_Next_Line_Tester.png)
+![results](https://github.com/Freya-Tenebrae/Get_next_line/blob/main/Get_Next_Line_Tester.png)
 
 > [gnlTester](https://github.com/Tripouille/gnlTester) by [Tripouille](https://github.com/Tripouille)
 
-![results](https://github.com/Freya-Tenebrae/Libft/blob/main/results_gnlTester.png)
+![results](https://github.com/Freya-Tenebrae/Get_next_line/blob/main/gnlTester1.png)
+![results](https://github.com/Freya-Tenebrae/Get_next_line/blob/main/gnlTester2.png)
+
+> [gnl-war-machine-v2019](https://github.com/C4r4c0l3/gnl-war-machine-v2019) by [C4r4c0l3](https://github.com/C4r4c0l3)
+
+![results](https://github.com/Freya-Tenebrae/Get_next_line/blob/main/gnl-war-machine-v2019.png)
