@@ -48,7 +48,6 @@ int main()
 			i++;
 			printf("line %i : %s\n", i, line);
 		}
-		printf("last line : %s", line);
 		close(fd);
 		printf("%s\n", line);
 		free(line);
