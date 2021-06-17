@@ -13,17 +13,18 @@ This Repositorie contains my solution to the project `get_next_line` of 42 (Pari
 ### Compilation
 
 the value of `BUFFER_SIZE` can be changed
+file.c represent other c files
 
 #### For only one file
 
 ```shell
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c file.c
 ```
 
 #### For Multiple file
 
 ```shell
-gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c file.c
 ```
 
 ### Exemple of Uses
@@ -45,7 +46,7 @@ int main()
 		while (get_next_line(fd, &line) == 1)
 		{
 			i++;
-			printf("line %i : %s", i, line);
+			printf("line %i : %s\n", i, line);
 		}
 		printf("last line : %s", line);
 		close(fd);
