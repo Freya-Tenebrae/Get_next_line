@@ -29,19 +29,29 @@ gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_
 ### Exemple of Uses
 
 ```c
+#include "get_next_line.h"
+#include <stdio.h>
+
 int main()
 {
-int	fd;
-char	*line = NULL;
+	int	fd;
+	int	i;
+	char	*line = NULL;
 
-	fd = open("test", O_RDONLY);
-	if (fd < 0)
-		return (-1);
-	get_next_line(fd, &line);
-	close(fd);
-	printf("%s\n", line);
-	free(line);
-	return (0);
+		fd = open("test", O_RDONLY);
+		if (fd < 0)
+			return (-1);
+		i = 0;
+		while (get_next_line(fd, &line) == 1)
+		{
+			i++;
+			printf("line %i : %s", i, line);
+		}
+		printf("last line : %s", line);
+		close(fd);
+		printf("%s\n", line);
+		free(line);
+		return (0);
 }
 ```
 
