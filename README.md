@@ -8,6 +8,43 @@ This Repositorie contains my solution to the project `get_next_line` of 42 (Pari
 
 [![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/cmaginot/get_next_line)](https://github.com/JaeSeoKim/badge42)
 
+## Using Get_next_line
+
+### Compilation
+
+the value of `BUFFER_SIZE` can be changed
+
+#### For only one file
+
+```shell
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
+```
+
+#### For Multiple file
+
+```shell
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c
+```
+
+### Exemple of Uses
+
+```c
+int main()
+{
+int	fd;
+char	*line = NULL;
+
+	fd = open("test", O_RDONLY);
+	if (fd < 0)
+		return (-1);
+	get_next_line(fd, &line);
+	close(fd);
+	printf("%s\n", line);
+	free(line);
+	return (0);
+}
+```
+
 ## Test
 
 Test effectuer sur un `MacBook Air (M1, 2020)` sous `macOS Big Sur Version 11.2.3` et sur un `iMac (fin 2012)` sous `macOS Mojave Version 10.14.6`
