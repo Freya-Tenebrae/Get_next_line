@@ -12,9 +12,6 @@ This Repositorie contains my solution to the project `get_next_line` of 42 (Pari
 
 ### Compilation
 
-the value of `BUFFER_SIZE` can be changed
-file.c represent other c files
-
 #### For only one file
 
 ```shell
@@ -26,6 +23,9 @@ gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.
 ```shell
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c file.c
 ```
+> the value of `BUFFER_SIZE` can be changed
+
+> file.c represent other c files
 
 ### Exemple of Uses
 
