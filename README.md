@@ -18,11 +18,24 @@ This Repositorie contains my solution to the project `get_next_line` of 42 (Pari
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c file.c
 ```
 
+or
+
+```shell
+make
+```
+
 #### For Multiple file
 
 ```shell
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line_bonus.c get_next_line_utils_bonus.c file.c
 ```
+
+or
+
+```shell
+make bonus
+```
+
 > the value of `BUFFER_SIZE` can be changed
 
 > file.c represent other c files
