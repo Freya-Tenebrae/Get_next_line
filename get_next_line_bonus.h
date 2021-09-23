@@ -6,7 +6,7 @@
 /*   By: cmaginot <cmaginot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/24 00:14:30 by cmaginot          #+#    #+#             */
-/*   Updated: 2021/06/03 13:45:02 by cmaginot         ###   ########.fr       */
+/*   Updated: 2021/09/21 16:39:53 by cmaginot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@
 /*                                  FUNCTION                                  */
 /* ************************************************************************** */
 int		get_next_line(int fd, char **line);
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char const *s1, char const *s2);
-void	*ft_memchr(const void *s, int c, size_t n);
-char	*ft_strndup(const char *s1, size_t n);
-void	*ft_memset(void *b, int c, size_t len);
+size_t	ft_strlen_gnl(const char *s);
+char	*ft_strjoin_gnl(char const *s1, char const *s2);
+void	*ft_memchr_gnl(const void *s, int c, size_t n);
+char	*ft_strndup_gnl(const char *s1, size_t n);
+void	*ft_memset_gnl(void *b, int c, size_t len);
 
 #endif
