@@ -1,7 +1,5 @@
 # Get_next_line
 
-Ce dépôt contiens ma solution au projet `get_next_line` de 42 (Paris).
-
 This Repositorie contains my solution to the project `get_next_line` of 42 (Paris).
 
 [![jaeskim's 42 stats](https://badge42.herokuapp.com/api/stats/cmaginot?cursus=42cursus&privacyName=true)](https://github.com/JaeSeoKim/badge42)
